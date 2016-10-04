@@ -42,13 +42,13 @@ var Component = React.createClass({
                             <TouchableOpacity onPress={() => {
                                     this.setState({modalVisible: false});
                                 }}>
-                                <Text style={{color:this.state.color}}>Cancel</Text>
+                              <Text style={{color:this.state.color, fontSize: 16}}>Cancel</Text>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => {
                                     if(this.props.onSubmit) this.props.onSubmit(this.state.selectedOption);
                                     this.setState({modalVisible: false});
                                 }}>
-                                <Text style={{color:this.state.color}}>Confirm</Text>
+                              <Text style={{color:this.state.color, fontSize: 16}}>Confirm</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={styles.mainBox}>
@@ -90,7 +90,7 @@ var styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding:0,
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#fff',
     },
     buttonView:{
         width:SCREEN_WIDTH,
@@ -102,6 +102,8 @@ var styles = StyleSheet.create({
     },
     bottomPicker : {
         width:SCREEN_WIDTH,
+        borderTopColor: '#ccc',
+        borderTopWidth: 1
     },
     mainBox: {
     }
